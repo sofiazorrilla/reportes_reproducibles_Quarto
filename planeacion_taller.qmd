@@ -1,0 +1,84 @@
+---
+title: "Taller de Introducción a Quarto"
+author: "Sofía Zorrilla"
+format: 
+  html:
+    toc: true
+---
+
+## Proceso de creación de reportes durante la investigación
+
+Tradicionalmente, el proceso de investigación se puede describir de esta manera:
+
+![Tomada de: Report Writing for data science](img/data_pipeline.png){fig-align="center"}
+
+No obstante, este flujo de información muchas veces es insuficiente para comunicar cómo se generó el conocimiento, permitir el reuso de los datos y finalmente facilitar la reproducibilidad o reproducción del estudio. Por un lado en una investigación hay muchos pasos que generan conocimiento pero no llegan a los documentos finales (con suerte algunos llegan al material suplementario o a los repositorios de código que acompañan las investigaciones). Por otro lado, la gran cantidad de datos que existen actualmente permiten su utilización de distintas maneras. A veces en diferentes áreas o a veces en forma de síntesis. Esto hace más eficiente el uso de los recursos económicos y de los productos de la ciencia. Sin embargo, la falta de documentación en los conjuntos de datos dificulta o imposibilita ese proceso.
+
+Adicionalmente, la robustez de los resultados en una investigación se beneficia de la confirmación de los mismos, ya sea mediante estudios independientes que los repitan o mediante la exploración de los análisis para reproducir los resultados de los autores. Sin embargo, no existe una manera estandarizada de comunicar la forma en que se deben ejecutar los análisis en un proyecto de investigación complejo, de forma en que sea reproducible. En algunos casos se hace mediante el texto, en otros mediante archivos con código, sin embargo, muchas veces no es suficiente y en el momento en el que queremos repetir o reproducir un análisis (incluso de nuestras propias investigaciones de tiempo atrás) no lo logramos.
+
+![](img/meme_own_code.jpg){width=60% align=center fig-align="center"}
+
+### Problemas
+
+- Dejar listos los resultados de forma que sean reproducibles requiere un esfuerzo considerable 
+- Los lectores deben descargar los datos/resultados y entender cómo se realizó el análisis
+- Puede haber diferencias entre los recursos/paquetes/equipos que tienen los lectores y los autores
+- Existen pocas herramientas que ayuden a autores/lectores -> está creciendo
+
+### Opciones 
+
+Una opción que existe es la generación de documentos que combinen texto/imágenes/diagramas con código y datos. Múltiples documentos se pueden ligar de manera que el análisis completo sea reproducible y las decisiones de los autores sean claras.
+
+- Rmarkdown (R + texto)
+- Jupyter Notebooks (python + texto)
+- Sweave (Latex + texto)
+
+[Quarto](https://quarto.org/) fue creado como un programa aislado que permite la creación de documentos que mezclan texto con código, además de que está diseñado para permitir el uso de diferentes lenguajes de programación (R, python, Julia, Observable JS). Se puede utilizar en diferentes plataformas y permite la creación de diferentes clases de documentos (presentaciones, html, pdf, artículos, libros, dashboards), que tienen diferentes capacidades (dinámicos vs estáticos).
+
+
+
+
+
+
+## Diferencias entre Quarto y Rmarkdown 
+
+
+## Tipos de documentos que se pueden hacer en Quarto
+
+
+## Estructura de un documento de Quarto
+
+
+## Dónde buscar ayuda y más funcionalidades
+
+
+## Introducción al lenguaje de markdown
+
+
+## Código en un documento (html y pdf)
+
+```{mermaid}
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
+flowchart LR
+  A[Datos crudos] --> B[Análisis] 
+  B --> A
+  B --> C[Documento de resultados]
+  classDef blk color:black;
+  class A,B,C blk;
+```
+
+
+## Imágenes
+
+
+## Tablas
+
+
+## Modificación de formato
+
+
+## Proyectos de Quarto
