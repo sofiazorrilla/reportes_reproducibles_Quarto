@@ -4,6 +4,7 @@ author: "Sofía Zorrilla"
 format: 
   html:
     toc: true
+    callout-appearance: minimal
 ---
 
 ## Proceso de creación de reportes durante la investigación
@@ -36,11 +37,8 @@ Una opción que existe es la generación de documentos que combinen texto/imáge
 [Quarto](https://quarto.org/) fue creado como un programa aislado que permite la creación de documentos que mezclan texto con código, además de que está diseñado para permitir el uso de diferentes lenguajes de programación (R, python, Julia, Observable JS). Se puede utilizar en diferentes plataformas y permite la creación de diferentes clases de documentos (presentaciones, html, pdf, artículos, libros, dashboards), que tienen diferentes capacidades (dinámicos vs estáticos).
 
 
-
-
-
-
 ## Diferencias entre Quarto y Rmarkdown 
+
 
 
 ## Tipos de documentos que se pueden hacer en Quarto
@@ -54,22 +52,247 @@ Una opción que existe es la generación de documentos que combinen texto/imáge
 
 ## Introducción al lenguaje de markdown
 
+Es una herramienta para escribir texto simple que originalmente servía para escribir en la web.
+
+> "Markdown is a text-to-HTML conversion tool
+for web writers. Markdown allows you to write
+using an easy-to-read, easy-to-write plain text
+format, then convert it to structurally valid XHTML
+(or HTML)." John Gruber
+
+Es un tipo de "lenguaje" que se caracteriza porque se puede leer sin un formato especial, a diferencia de otros lenguajes como HTML.
+
+La sintaxis es simple y no requiere de aprenderse demasiados comandos. En realidad puedes simplemente utilizarlo como documento de texto. 
+
+::: {.callout-tip appearance="simple"}
+## Introducción completa a Markdown
+
+En la [página de ayuda](https://quarto.org/docs/authoring/markdown-basics.html#text-formatting) de Quarto puedes encontrar la mayoría de la sintáxis básica que necesitarás. 
+
+Una traducción al español de esa página la puedes encontrar en el archivo intro_markdown.qmd del taller.
+
+:::
+
+
+::: {.callout-note collapse="true"}
+## Sintaxis en el texto
++-----------------------------------------+-----------------------------------------+
+| Markdown Syntax                         | Output                                  |
++=========================================+=========================================+
+| ``` markdown                            | *italics*, **bold**, ***bold italics*** |
+| *italics*, **bold**, ***bold italics*** |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | superscript^2^ / subscript~2~           |
+| superscript^2^ / subscript~2~           |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | ~~strikethrough~~                       |
+| ~~strikethrough~~                       |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | `verbatim code`                         |
+| `verbatim code`                         |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+:::
+
+::: {.callout-note collapse="true"}
+## Encabezados 
+
++------------------+-----------------------------------+
+| Markdown         | Resultado                         |
++==================+===================================+
+| ``` markdown     | # Heading 1 {.heading-output}     |
+| # Heading 1      |                                   |
+| ```              |                                   |
++------------------+-----------------------------------+
+| ``` markdown     | ## Heading 2 {.heading-output}    |
+| ## Heading 2     |                                   |
+| ```              |                                   |
++------------------+-----------------------------------+
+| ``` markdown     | ### Heading 3 {.heading-output}   |
+| ### Heading 3    |                                   |
+| ```              |                                   |
++------------------+-----------------------------------+
+| ``` markdown     | #### Heading 4 {.heading-output}  |
+| #### Heading 4   |                                   |
+| ```              |                                   |
++------------------+-----------------------------------+
+| ``` markdown     | ##### Heading 5 {.heading-output} |
+| ##### Heading 5  |                                   |
+| ```              |                                   |
++------------------+-----------------------------------+
+| ``` markdown     | ###### Heading 6 {.heading-output}|
+| ###### Heading 6 |                                   |
+| ```              |                                   |
++------------------+-----------------------------------+
+
+: {tbl-colwidths="[50, 50]"}
+
+:::
+
+::: {.callout-note collapse="true"}
+## Vínculos e imágenes
+
++------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| Markdown Syntax                                                        | Output                                                                                                 |
++========================================================================+========================================================================================================+
+| ``` markdown                                                           | <https://quarto.org>                                                                                   |
+| <https://quarto.org>                                                   |                                                                                                        |
+| ```                                                                    |                                                                                                        |
++------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| ``` markdown                                                           | [Quarto](https://quarto.org)                                                                           |
+| [Quarto](https://quarto.org)                                           |                                                                                                        |
+| ```                                                                    |                                                                                                        |
++------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| ``` markdown                                                           | [Markdown Basics](./markdown-basics.qmd)                                                               |
+| [Markdown Basics](./markdown-basics.qmd)                               |                                                                                                        |
+| ```                                                                    |                                                                                                        |
++------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| ``` markdown                                                           | [Markdown Basics - Links & Images](./markdown-basics.qmd#links-images)                                 |
+| [Markdown Basics - Links & Images](./markdown-basics.qmd#links-images) |                                                                                                        |
+| ```                                                                    |                                                                                                        |
++------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| ``` markdown                                                           | [Markdown Basics - Links & Images](#links-images)                                                      |
+| [Markdown Basics - Links & Images](#links-images)                      |                                                                                                        |
+| ```                                                                    |                                                                                                        |
++------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| ``` markdown                                                           | ![Caption](img/elephant.png){fig-alt="A line drawing of an elephant."}                                 |
+| ![Caption](img/elephant.png)                                           |                                                                                                        |
+| ```                                                                    |                                                                                                        |
++------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+: {tbl-colwidths="[50, 50]"}
+
+
+:::
+
+::: {.callout-note collapse="true"}
+## Listas
+
++-----------------------------------+---------------------------------+
+| Markdown Syntax                   | Output                          |
++===================================+=================================+
+| ``` markdown                      |                                 |
+| * unordered list                  | * unordered list                |
+|   + sub-item 1                    |   + sub-item 1                  |
+|   + sub-item 2                    |   + sub-item 2                  |
+|     - sub-sub-item 1              |     - sub-sub-item 1            |
+| ```                               |                                 |
++-----------------------------------+---------------------------------+
+| ``` markdown                      |                                 |
+| *   item 2                        | -   item 2                      |
+|                                   |                                 |
+|     Continued (indent 4 spaces)   |     Continued (indent 4 spaces) |
+| ```                               |                                 |
++-----------------------------------+---------------------------------+
+| ``` markdown                      |                                 |
+| 1. ordered list                   |  1. ordered list                |
+| 2. item 2                         |  2. item 2                      |
+|    i) sub-item 1                  |     i) sub-item 1               |
+|       A.  sub-sub-item 1          |        A.  sub-sub-item 1       |
+| ```                               |                                 |
++-----------------------------------+---------------------------------+
+| ```` markdown                     |                                 |
+| 1. ordered list                   |  1. ordered list                |
+| 2. item 2                         |  2. item 2                      |
+|                                   |                                 |
+|    ```python                      |     ```python                   |
+|    print("Hello, World!")         |     print("Hello, World!")      |
+|    ```                            |     ```                         |
+|                                   |                                 |
+|    A.  sub-sub-item 1             |     A.  sub-sub-item 1          |
+| ````                              |                                 |
++-----------------------------------+---------------------------------+
+| ``` markdown                      |                                 |
+| - [ ] Task 1                      | - [ ] Task 1                    |
+| - [x] Task 2                      | - [x] Task 2                    |
+| ```                               |                                 |
++-----------------------------------+---------------------------------+
+| ``` markdown                      |                                 |
+| (@)  A list whose numbering       |  (1) A list whose numbering     |
+|                                   |                                 |
+| continues after                   |  continues after                |
+|                                   |                                 |
+| (@)  an interruption              |  (2) an interruption            |
+| ```                               |                                 |
++-----------------------------------+---------------------------------+
+| ``` markdown                      |                                 |
+| ::: {}                            | ::: {}                          |
+| 1. A list                         | 1. A list                       |
+| :::                               | :::                             |
+|                                   |                                 |
+| ::: {}                            | ::: {}                          |
+| 1. Followed by another list       | 1. Followed by another list     |
+| :::                               | :::                             |
+| ```                               |                                 |
++-----------------------------------+---------------------------------+
+| ``` markdown                      |                                 |
+| term                              | term                            |
+| : definition                      | : definition                    |
+| ```                               |                                 |
++-----------------------------------+---------------------------------+
+:::
+
+
+:::{.callout-note collapse="true"}
+## Ecuaciones
+
++---------------------------+-------------------------+
+| Markdown Syntax           | Output                  |
++===========================+=========================+
+| ``` markdown              |                         |
+| inline math: $E = mc^{2}$ | inline math: $E=mc^{2}$ |
+| ```                       |                         |
++---------------------------+-------------------------+
+| ``` markdown              |                         |
+| display math:             | display math:           |
+|                           |                         |
+| $$E = mc^{2}$$            | $$E = mc^{2}$$          |
+| ```                       |                         |
++---------------------------+-------------------------+
+:::
+
+
+
 
 ## Código en un documento (html y pdf)
 
-```{mermaid}
----
-config:
-  look: handDrawn
-  theme: neutral
----
-flowchart LR
-  A[Datos crudos] --> B[Análisis] 
-  B --> A
-  B --> C[Documento de resultados]
-  classDef blk color:black;
-  class A,B,C blk;
+Para agregar un bloque de código ("chunk") puedes utilizar el atajo `ctrl + alt + i`
+
+El bloque se compone de diferentes partes
+```{{r}} 
+#| <opciones del chunk>
+
+<codigo>
+
 ```
+
+1. Lenguaje de programación `{r}` - puedes usar `{python}`, `{markdown}`, etc.
+2. Opciones del chunk - se especifican utilizando `#|` al principio, seguido de la etiqueta que queremos utilizar y la opción para esa etitqueta. Por ejemplo para asignar un nombre al chunk usamos `#| label: fig-airquality`
+3. Código 
+
+Ejemplo: 
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: "Temperature and ozone level."
+#| warning: false
+
+library(ggplot2)
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+
+Las opciones más comunes que se pueden modificar en los chunks son:
+
+- `#| label: fig-airquality`: nombre de la figura/tabla/chunk para poder ser referenciados más adelante
+- `#| echo: true`: mostrar (true) o no (false) el código
+- `#| eval: true`: evaluar o no el código 
+
+
 
 
 ## Imágenes
