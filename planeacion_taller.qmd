@@ -4,7 +4,9 @@ author: "Sofía Zorrilla"
 format: 
   html:
     toc: true
+    toc-depth: 2
     callout-appearance: minimal
+    css: css.css
 ---
 
 ## Proceso de creación de reportes durante la investigación
@@ -269,7 +271,7 @@ El bloque se compone de diferentes partes
 ```
 
 1. Lenguaje de programación `{r}` - puedes usar `{python}`, `{markdown}`, etc.
-2. Opciones del chunk - se especifican utilizando `#|` al principio, seguido de la etiqueta que queremos utilizar y la opción para esa etitqueta. Por ejemplo para asignar un nombre al chunk usamos `#| label: fig-airquality`
+2. [Opciones del chunk](https://quarto.org/docs/reference/cells/cells-knitr.html) - se especifican utilizando `#|` al principio, seguido de la etiqueta que queremos utilizar y la opción para esa etitqueta. Por ejemplo para asignar un nombre al chunk usamos `#| label: fig-airquality`
 3. Código 
 
 Ejemplo: 
@@ -293,9 +295,76 @@ Las opciones más comunes que se pueden modificar en los chunks son:
 - `#| eval: true`: evaluar o no el código 
 
 
-
-
 ## Imágenes
+
+Las imágenes se pueden incluir usando markdown, html o utilizando código (por ejemplo usando el paquete knitr).
+
+#### Markdown 
+
+```markdown
+![Caption](link o liga a la imagen)
+
+## Ejemplo
+
+![Figura de elefante](img/elephant.png){#fig-elefante00}
+
+```
+
+![Elefante](img/elephant.png){#fig-elefante00}
+
+Se pueden modificar algunos parámetros de la imagen usando etiquetas:
+
+```markdown
+![Elefante](img/elephant.png){#fig-elefante0 width="50%" fig-align="center"}
+
+```
+
+![Elefante](img/elephant.png){#fig-elefante0 width=50% fig-align="center"}
+
+Se pueden utilizar bloques de HTML (div) para organizar las imágenes en columnas
+
+::: {#fig-elephants layout-ncol=2}
+
+![Surus](img/elephant.png){#fig-elephant1}
+
+![Hanno](img/elephant.png){#fig-elephant2}
+
+Elefantes famosos
+:::
+
+#### HTML
+
+
+```html
+<img src="img/elephant.png" alt="A drawing of an elephant." width="300" class="center">
+```
+
+<img src="img/elephant.png" alt="A drawing of an elephant." width="300" class="center"> 
+
+#### Knitr
+
+Se puede utilizar la función include_graphics del paquete knitr para agregar una imagen. Las propiedades de la imagen se controlan por medio de las opciones de chunk.
+
+```{.r}
+#| echo: false
+#| out-width: 50% 
+#| fig-align: center
+
+library(knitr)
+
+knitr::include_graphics("img/elephant.png")
+```
+
+
+```{r}
+#| echo: false
+#| out-width: 50% 
+#| fig-align: center
+
+library(knitr)
+
+knitr::include_graphics("img/elephant.png")
+```
 
 
 ## Tablas
