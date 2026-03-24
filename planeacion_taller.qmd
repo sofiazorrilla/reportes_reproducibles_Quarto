@@ -7,6 +7,7 @@ format:
     toc-depth: 2
     callout-appearance: minimal
     css: css.css
+    embed-resources: true
 ---
 
 ## Proceso de creación de reportes durante la investigación
@@ -41,9 +42,22 @@ Una opción que existe es la generación de documentos que combinen texto/imáge
 
 ## Diferencias entre Quarto y Rmarkdown 
 
+En escencia, para los usuarios de R, Quarto funciona de una manera muy similar que R markdown. Quarto fue creado para mejorar la colaboración entre científicos y técnicos. Ahora es un sistema independiente que integra muchas de las funciones que se desarrollaron con R markdown.
 
+Una de las diferencias y ventajas importantes es la compatibilidad de Quarto con múltiples plataformas (p. e. knitr y jupyter notebooks). Quarto es independiente de R, está diseñado para funcionar con distintos lenguajes y está diseñado para acomodar lenguajes que no existen. 
+
+Sin embargo, Rmarkdown seguirá teniendo soporte, aunque algunas de las funcionalidades que desarrollarán en el futuro se realizarán en Quarto.
 
 ## Tipos de documentos que se pueden hacer en Quarto
+
+Los formatos básicos que se pueden realizar en Quarto son:
+
+- [html](https://quarto.org/docs/output-formats/html-basics.html)
+- [pdf](https://quarto.org/docs/output-formats/pdf-basics.html)
+- [word](https://quarto.org/docs/output-formats/ms-word.html)
+- [diapositivas html](https://quarto.org/docs/presentations/revealjs/)
+- [libros](https://quarto.org/docs/books/)
+- [dashboards](https://quarto.org/docs/dashboards/)
 
 
 ## Estructura de un documento de Quarto

@@ -1,0 +1,12 @@
+---
+title: "Reporte de Quarto"
+date: today
+author: "Sofía Zorrilla Azcué"
+format:
+    html:
+      embed-resources: true
+---
+
+## Introducción
+
+## Objetivos

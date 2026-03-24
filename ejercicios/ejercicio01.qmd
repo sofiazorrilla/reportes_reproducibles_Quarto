@@ -1,0 +1,8 @@
+---
+title: "Reporte de Quarto"
+author: "Sofía Zorrilla Azcué"
+date: today
+format: 
+    html:
+        embed-resources: true
+---
