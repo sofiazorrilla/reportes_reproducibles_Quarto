@@ -11,6 +11,7 @@ format:
     lang: es
     number-sections: true
 bibliography: paquetes.bib
+
 ---
 
 # Proceso de creación de reportes durante la investigación
