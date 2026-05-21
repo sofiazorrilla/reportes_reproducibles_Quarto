@@ -7,7 +7,7 @@ format:
     theme: [styles.scss, brand]
 fontsize: 25pt
 title-slide-attributes:
-  data-background-color: "#EDF3F9"
+  data-background-color: "#ffffff"
   data-background-size: contain
   data-background-opacity: "0.5"
   style: "text-align: left"

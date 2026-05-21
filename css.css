@@ -4,3 +4,27 @@
   margin-right: auto;
   width: 50%;
 }
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #575757;
+}
+
+/* Links */
+a {
+  color: #5C7A8D;
+}
+
+a:hover {
+  color: #7A8F63;
+}
+
+/* TOC */
+#TOC a {
+  color: #adacac;
+}
+
+/* Título principal */
+.title {
+  color: #575757;
+}

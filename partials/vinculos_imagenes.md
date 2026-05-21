@@ -9,20 +9,16 @@
 | [Quarto](https://quarto.org)                                           |                                                                                                        |
 | ```                                                                    |                                                                                                        |
 +------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| ``` markdown                                                           | [Markdown Basics](./markdown-basics.qmd)                                                               |
-| [Markdown Basics](./markdown-basics.qmd)                               |                                                                                                        |
+| ``` markdown                                                           | [Documentos](../planeacion_taller.html)                                                                |
+| [Documentos](../planeacion_taller.html)                                |                                                                                                        |
 | ```                                                                    |                                                                                                        |
 +------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| ``` markdown                                                           | [Markdown Basics - Links & Images](./markdown-basics.qmd#links-images)                                 |
-| [Markdown Basics - Links & Images](./markdown-basics.qmd#links-images) |                                                                                                        |
+| ``` markdown                                                           | [Secciones en un documento](../planeacion_taller.html#sec-introMd)                                     |
+| [Secciones en un documento](../planeacion_taller.html#sec-introMd)     |                                                                                                        |
 | ```                                                                    |                                                                                                        |
 +------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| ``` markdown                                                           | [Markdown Basics - Links & Images](#links-images)                                                      |
-| [Markdown Basics - Links & Images](#links-images)                      |                                                                                                        |
-| ```                                                                    |                                                                                                        |
-+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
-| ``` markdown                                                           | ![Caption](img/elephant.png){fig-alt="A line drawing of an elephant."}                                 |
-| ![Caption](img/elephant.png)                                           |                                                                                                        |
+| ``` markdown                                                           | ![Imagen](img/elephant.png){fig-alt="A line drawing of an elephant."}                                  |
+| ![Imagen](img/elephant.png)                                            |                                                                                                        |
 | ```                                                                    |                                                                                                        |
 +------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
 : {tbl-colwidths="[50, 50]"}
